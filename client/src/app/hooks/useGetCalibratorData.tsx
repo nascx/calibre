@@ -61,7 +61,7 @@ const useGetCalibratorData = () => {
     const [location, setLocation] = useState<string>('')
 
     const handleChangeLocation = async () => {
-        await axios.post('http://localhost:1777/historic', {
+        await axios.post('http://10.12.100.156:1777/historic', {
             historicId: historic[historic.length - 1].id,
             calibratorId: historic[0].calibrator_id,
             calibratorType: historic[0].calibrator_type,
@@ -72,7 +72,7 @@ const useGetCalibratorData = () => {
         }).then(async (res) => {
             toast.success(res.data.message)
             setChangeLocation(false)
-            await axios.get('http://localhost:1777/historic', {
+            await axios.get('http://10.12.100.156:1777/historic', {
                 params: {
                     calibratorId: input
                 }
