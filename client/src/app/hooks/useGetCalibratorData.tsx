@@ -1,7 +1,6 @@
-import { ChangeEvent, use, useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import axios from 'axios';
 import { toast } from 'react-toastify'
-import { error } from 'console';
 
 interface HistoricData {
     id: number,
