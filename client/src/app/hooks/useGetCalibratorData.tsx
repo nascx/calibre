@@ -29,7 +29,7 @@ const useGetCalibratorData = () => {
     const [historic, setHistoric] = useState<HistoricData[]>([])
 
     const handleSearchByCalibrator = () => {
-        axios.get('http://localhost:1777/historic', {
+        axios.get('http://10.12.100.156:1777/historic', {
             params: {
                 calibratorId: input
             }
